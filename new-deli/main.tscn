@@ -1,12 +1,14 @@
 [gd_scene format=3 uid="uid://dwi7h75gypymq"]
 
+[ext_resource type="Script" uid="uid://bido85t4akm4v" path="res://main.gd" id="1_h2yge"]
 [ext_resource type="PackedScene" uid="uid://cnxb7utrgno24" path="res://node_2d.tscn" id="1_ig7tw"]
 [ext_resource type="PackedScene" uid="uid://dhbdmgabnbow5" path="res://sandwich.tscn" id="2_0xm2m"]
 
 [node name="Node2D" type="Node2D" unique_id=1965745833]
+script = ExtResource("1_h2yge")
 
 [node name="Node2D" parent="." unique_id=1491399048 instance=ExtResource("1_ig7tw")]
-position = Vector2(-71, 5)
+position = Vector2(113, 266)
 
 [node name="Node2D2" parent="." unique_id=1215365694 instance=ExtResource("2_0xm2m")]
-position = Vector2(309, 244)
+position = Vector2(322, 111)

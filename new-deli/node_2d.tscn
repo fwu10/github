@@ -10,13 +10,11 @@ size = Vector2(93.5, 95)
 script = ExtResource("1_wtcfe")
 
 [node name="Icon" type="Sprite2D" parent="." unique_id=1218998906]
-position = Vector2(137, 60)
 texture = ExtResource("2_0e48y")
 
 [node name="Area2D" type="Area2D" parent="." unique_id=623153238]
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D" unique_id=638841702]
-position = Vector2(138, 58)
 shape = SubResource("RectangleShape2D_y32ns")
 
 [connection signal="input_event" from="Area2D" to="." method="_on_area_2d_input_event"]
