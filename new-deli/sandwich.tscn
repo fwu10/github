@@ -4,10 +4,10 @@
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_bof1g"]
 
-[node name="Node2D" type="Node2D" unique_id=1215365694]
+[node name="sandwich" type="Node2D" unique_id=1215365694 groups=["sandwich"]]
 script = ExtResource("1_godsu")
 
-[node name="Area2D" type="Area2D" parent="." unique_id=1667492232]
+[node name="Area2D" type="Area2D" parent="." unique_id=1667492232 groups=["sandwich"]]
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D" unique_id=355783283]
 shape = SubResource("RectangleShape2D_bof1g")

@@ -22,3 +22,15 @@ func _on_area_2d_input_event(_viewport: Node, event: InputEvent, _shape_idx: int
 			dragging = true 
 		else:
 			dragging = false
+
+
+func _on_area_2d_area_entered(area: Area2D) -> void:
+	if area.is_in_group("sandwich"):
+		print("the ingredients is in sandwich")
+
+
+func _on_area_2d_area_exited(area: Area2D) -> void:
+	if $Area2D.get_overlapping_areas().size() == 0:
+		print("WORKING")
+		queue_free()
+		
