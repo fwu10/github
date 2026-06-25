@@ -1,23 +1,18 @@
-[gd_scene format=3 uid="uid://dwi7h75gypymq"]
+[gd_scene format=3 uid="uid://bwwbkx42bejaq"]
 
+[ext_resource type="PackedScene" uid="uid://dwi7h75gypymq" path="res://host.tscn" id="1_ig7tw"]
 [ext_resource type="PackedScene" uid="uid://dhbdmgabnbow5" path="res://sandwich.tscn" id="2_0xm2m"]
-[ext_resource type="Script" uid="uid://c8gp4proalyaa" path="res://ingredient.gd" id="2_h2yge"]
 
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_0xm2m"]
-size = Vector2(43.5, 45)
+[node name="main" type="Node2D" unique_id=1784249760]
 
-[node name="Node2D" type="Node2D" unique_id=1965745833]
+[node name="sandwich" parent="." unique_id=1215365694 instance=ExtResource("2_0xm2m")]
+position = Vector2(250, 197)
 
-[node name="Node2D2" parent="." unique_id=1215365694 instance=ExtResource("2_0xm2m")]
-position = Vector2(322, 111)
+[node name="Node2D" parent="." unique_id=1965745833 instance=ExtResource("1_ig7tw")]
+position = Vector2(96, 75)
 
-[node name="Ingredients" type="Node2D" parent="." unique_id=904183824]
-script = ExtResource("2_h2yge")
+[node name="Node2D2" parent="." unique_id=1017218153 instance=ExtResource("1_ig7tw")]
+position = Vector2(214, 84)
 
-[node name="Area2D" type="Area2D" parent="Ingredients" unique_id=422187724]
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Ingredients/Area2D" unique_id=1189339700]
-position = Vector2(204, 257)
-shape = SubResource("RectangleShape2D_0xm2m")
-
-[connection signal="input_event" from="Ingredients/Area2D" to="Ingredients" method="_on_area_2d_input_event"]
+[node name="Node2D3" parent="." unique_id=1550604958 instance=ExtResource("1_ig7tw")]
+position = Vector2(342, 76)

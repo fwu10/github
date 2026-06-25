@@ -19,8 +19,9 @@ func _on_area_2d_mouse_exited() -> void:
 func _on_area_2d_input_event(_viewport: Node, event: InputEvent, _shape_idx: int) -> void:
 	if event is InputEventMouseButton and event.button_index == MOUSE_BUTTON_LEFT:
 		if event.pressed and mouse_inside:
-			mouse_offset = global_position - get_global_mouse_position()
-			dragging = true 
+			if not dragging:
+				mouse_offset = global_position - get_global_mouse_position()
+				dragging = true 
 		else:
 			dragging = false
 			_ingredients_moving()
@@ -33,7 +34,7 @@ func _on_area_2d_area_entered(area: Area2D) -> void:
 
 func _ingredients_moving() -> void:
 	if on_sandwich:
-		print("test")
+		print("ingredients-onsandwich")
 	else:
 		queue_free()
 
@@ -41,3 +42,4 @@ func _ingredients_moving() -> void:
 func _on_area_2d_area_exited(area: Area2D) -> void:
 	if area.is_in_group("sandwich"):
 		on_sandwich = false
+		
