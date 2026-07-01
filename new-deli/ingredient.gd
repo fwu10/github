@@ -1,27 +1,23 @@
 extends Node2D
-@export var ingredients_scene: PackedScene
 var current_instance: Node = null
-
+@export var ingredient_type: String
+@export var ingredient_icon: Texture2D 
 
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
-	print("spawning first time")
-	_spawn_ingredient()
+	pass
 
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta: float) -> void:
-	if is_instance_valid(current_instance):
-		print("ingreidnet is on host")
-	else:
-		print("ingreidnet not on host")
-		_spawn_ingredient() #THIS CONSTANTLY SPAWNS EVERYSECOND
+	pass
 
 func _spawn_ingredient() -> void:
 	var ingredients = load("res://ingredients.tscn")
-	var mov_ingredients = ingredients.instantiate()
-	get_parent().add_child(mov_ingredients)
-	mov_ingredients.global_position = $Area2D/CollisionShape2D.global_position
+	current_instance = ingredients.instantiate()
+	current_instance.dragging = true
+	get_parent().call_deferred("add_child", current_instance)
+	
 	
 
 func _on_area_2d_input_event(_viewport: Node, event: InputEvent, _shape_idx: int) -> void:
@@ -29,4 +25,8 @@ func _on_area_2d_input_event(_viewport: Node, event: InputEvent, _shape_idx: int
 		if not is_instance_valid(current_instance):
 			_spawn_ingredient()
 			
-			
+func _on_ingredient_placed() -> void:
+	match ingredient_type:
+		"tomato":
+			print("tomato sucessfully placed on the sandwich")
+#when switching script to main node of host it breaks the code

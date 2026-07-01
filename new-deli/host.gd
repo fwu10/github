@@ -3,9 +3,11 @@ var dragging := false
 var mouse_offset := Vector2.ZERO
 var mouse_inside = false
 var on_sandwich := false
+
+
 func _process(delta: float) -> void:
 	if dragging:
-		global_position = get_global_mouse_position() + mouse_offset
+		global_position = get_global_mouse_position() + mouse_offset #not needed
 
 func _on_area_2d_mouse_entered() -> void:
 	mouse_inside = true
@@ -36,10 +38,13 @@ func _ingredients_moving() -> void:
 	if on_sandwich:
 		print("ingredients-onsandwich")
 	else:
+		print("deleting")
 		queue_free()
+	
 
 
 func _on_area_2d_area_exited(area: Area2D) -> void:
 	if area.is_in_group("sandwich"):
 		on_sandwich = false
+		
 		

@@ -15,3 +15,4 @@ func _on_area_2d_area_entered(area: Area2D) -> void:
 	var draggable = area.get_parent() 
 	draggable.dragging = false
 	draggable.global_position = global_position
+	
