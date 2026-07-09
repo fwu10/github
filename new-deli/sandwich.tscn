@@ -3,6 +3,7 @@
 [ext_resource type="Script" uid="uid://by6jjqqqyhc8w" path="res://sandwich.gd" id="1_godsu"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_bof1g"]
+size = Vector2(239, 20)
 
 [node name="sandwich" type="Node2D" unique_id=1215365694 groups=["sandwich"]]
 script = ExtResource("1_godsu")
@@ -10,6 +11,7 @@ script = ExtResource("1_godsu")
 [node name="Area2D" type="Area2D" parent="." unique_id=1667492232 groups=["sandwich"]]
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D" unique_id=355783283]
+position = Vector2(-0.5, 0)
 shape = SubResource("RectangleShape2D_bof1g")
 
 [connection signal="area_entered" from="Area2D" to="." method="_on_area_2d_area_entered"]

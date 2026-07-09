@@ -22,11 +22,6 @@ func _spawn_ingredient() -> void:
 
 func _on_area_2d_input_event(_viewport: Node, event: InputEvent, _shape_idx: int) -> void:
 	if event is InputEventMouseButton and event.button_index == MOUSE_BUTTON_LEFT:
-		if not is_instance_valid(current_instance):
+		if not is_instance_valid(current_instance) or current_instance.is_in_group("on_sandwich"):
 			_spawn_ingredient()
 			
-func _on_ingredient_placed() -> void:
-	match ingredient_type:
-		"tomato":
-			print("tomato sucessfully placed on the sandwich")
-#when switching script to main node of host it breaks the code
