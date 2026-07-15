@@ -1,5 +1,4 @@
 extends Node2D
-var ingredient_type: String = ""
 
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
@@ -15,13 +14,12 @@ func _on_area_2d_area_entered(area: Area2D) -> void:
 		var draggable = area.get_parent() 
 		draggable.global_position.y = global_position.y
 		draggable.dragging = false
-		_on_ingredient_placed(area)
+		match draggable.ingredient_type:
+				"tomato":
+					print("tomato successfully placed on the sandwich")
+				"lettuce":
+					print("lettuce successfully placed on the sandwich")
+			
 
-func _on_ingredient_placed(area: Area2D) -> void:
-	var draggable = area.get_parent()
-	match draggable.ingredient_type:
-		"tomato":
-			print("tomato successfully placed on the sandwich")
-		"lettuce":
-			print("lettuce successfully placed on the sandwich")
+
 		
