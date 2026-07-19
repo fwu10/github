@@ -47,6 +47,6 @@ func _ingredients_moving() -> void:
 func _on_area_2d_area_exited(area: Area2D) -> void:
 	if area.is_in_group("sandwich"):
 		on_sandwich = false
-		remove_from_group("on_sanwich")
+		remove_from_group("on_sandwich")
 		
 		

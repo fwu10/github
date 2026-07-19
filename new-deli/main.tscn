@@ -9,7 +9,7 @@
 position = Vector2(394, 185)
 
 [node name="ingredients" parent="." unique_id=1965745833 instance=ExtResource("1_ig7tw")]
-position = Vector2(355, 277)
+position = Vector2(344, 278)
 ingredient_type = "tomato"
 
 [node name="ingredients2" parent="." unique_id=1446925162 instance=ExtResource("1_ig7tw")]
