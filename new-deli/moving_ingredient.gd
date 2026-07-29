@@ -3,8 +3,12 @@ var dragging := false
 var mouse_offset := Vector2.ZERO
 var mouse_inside = false
 var on_sandwich := false
-var ingredient_type: String = " "
+@export var ingredient_type: String
+@onready var animated_sprite: AnimatedSprite2D = $AnimatedSprite2D
 
+func _ready() -> void:
+	animated_sprite.play(ingredient_type)
+	
 func _process(delta: float) -> void:
 	if dragging:
 		global_position = get_global_mouse_position() + mouse_offset
@@ -37,6 +41,7 @@ func _on_area_2d_area_entered(area: Area2D) -> void:
 func _ingredients_moving() -> void:
 	if on_sandwich:
 		print("ingredients-onsandwich")
+		
 		
 	else:
 		print("deleting")

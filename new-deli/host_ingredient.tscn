@@ -1,9 +1,30 @@
 [gd_scene format=3 uid="uid://dwi7h75gypymq"]
 
 [ext_resource type="Script" uid="uid://c8gp4proalyaa" path="res://ingredient.gd" id="1_0wu4t"]
+[ext_resource type="Texture2D" uid="uid://de03o58u0rwcy" path="res://lettuce_tray.jpg" id="2_qpwhh"]
+[ext_resource type="Texture2D" uid="uid://c3gq12iv0vp4l" path="res://images.jpg" id="3_qpwhh"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_0xm2m"]
 size = Vector2(43.5, 45)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_qpwhh"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("2_qpwhh")
+}],
+"loop": true,
+"name": &"lettuce",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("3_qpwhh")
+}],
+"loop": true,
+"name": &"tomato",
+"speed": 5.0
+}]
 
 [node name="ingredients" type="Node2D" unique_id=1965745833]
 script = ExtResource("1_0wu4t")
@@ -12,5 +33,11 @@ script = ExtResource("1_0wu4t")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D" unique_id=1189339700]
 shape = SubResource("RectangleShape2D_0xm2m")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=896240070]
+position = Vector2(-0.4999988, 0.49999952)
+scale = Vector2(0.06646059, 0.10359409)
+sprite_frames = SubResource("SpriteFrames_qpwhh")
+animation = &"lettuce"
 
 [connection signal="input_event" from="Area2D" to="." method="_on_area_2d_input_event"]

@@ -8,10 +8,10 @@
 [node name="sandwich" parent="." unique_id=1215365694 instance=ExtResource("2_0xm2m")]
 position = Vector2(394, 185)
 
-[node name="ingredients" parent="." unique_id=1965745833 instance=ExtResource("1_ig7tw")]
-position = Vector2(344, 278)
+[node name="ingredients3" parent="." unique_id=461560794 instance=ExtResource("1_ig7tw")]
+position = Vector2(555, 283)
 ingredient_type = "tomato"
 
 [node name="ingredients2" parent="." unique_id=1446925162 instance=ExtResource("1_ig7tw")]
-position = Vector2(300, 278)
+position = Vector2(298, 278)
 ingredient_type = "lettuce"
