@@ -1,0 +1,14 @@
+[gd_scene format=3 uid="uid://c436a50v0p8rt"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_vu45j"]
+radius = 147.23111
+
+[node name="Character" type="Node2D" unique_id=1096973992]
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=157689311]
+
+[node name="Area2D" type="Area2D" parent="." unique_id=992097524]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D" unique_id=1548147289]
+position = Vector2(-2, 0)
+shape = SubResource("CircleShape2D_vu45j")

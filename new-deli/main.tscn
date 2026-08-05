@@ -1,17 +1,35 @@
 [gd_scene format=3 uid="uid://bwwbkx42bejaq"]
 
+[ext_resource type="Script" uid="uid://bido85t4akm4v" path="res://main.gd" id="1_1bvp3"]
 [ext_resource type="PackedScene" uid="uid://dwi7h75gypymq" path="res://host_ingredient.tscn" id="1_ig7tw"]
 [ext_resource type="PackedScene" uid="uid://dhbdmgabnbow5" path="res://sandwich.tscn" id="2_0xm2m"]
+[ext_resource type="Script" uid="uid://bskh1ii6sxpl1" path="res://bench_switch.gd" id="4_lquwl"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_1bvp3"]
 
 [node name="main" type="Node2D" unique_id=1784249760]
+script = ExtResource("1_1bvp3")
 
-[node name="sandwich" parent="." unique_id=1215365694 instance=ExtResource("2_0xm2m")]
-position = Vector2(394, 185)
+[node name="Bench1" type="Node2D" parent="." unique_id=1483968556]
 
-[node name="ingredients3" parent="." unique_id=461560794 instance=ExtResource("1_ig7tw")]
-position = Vector2(555, 283)
+[node name="sandwich" parent="Bench1" unique_id=1215365694 instance=ExtResource("2_0xm2m")]
+position = Vector2(151, 282)
+
+[node name="ingredients3" parent="Bench1" unique_id=461560794 instance=ExtResource("1_ig7tw")]
+position = Vector2(404, 286)
 ingredient_type = "tomato"
 
-[node name="ingredients2" parent="." unique_id=1446925162 instance=ExtResource("1_ig7tw")]
-position = Vector2(298, 278)
+[node name="ingredients2" parent="Bench1" unique_id=1446925162 instance=ExtResource("1_ig7tw")]
+position = Vector2(462, 289)
 ingredient_type = "lettuce"
+
+[node name="Area2D" type="Area2D" parent="." unique_id=276369202]
+script = ExtResource("4_lquwl")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D" unique_id=1303280938]
+position = Vector2(35, 36)
+shape = SubResource("RectangleShape2D_1bvp3")
+
+[node name="Bench2" type="Node2D" parent="." unique_id=52150766]
+
+[connection signal="input_event" from="Area2D" to="Area2D" method="_on_input_event"]

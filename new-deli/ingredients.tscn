@@ -2,7 +2,7 @@
 
 [ext_resource type="Script" uid="uid://c5h76srpbneyk" path="res://moving_ingredient.gd" id="1_wtcfe"]
 [ext_resource type="Texture2D" uid="uid://k480mn02slf" path="res://lettuce.jpg" id="2_iyy21"]
-[ext_resource type="Texture2D" uid="uid://m6du1ty1g4a0" path="res://images (1).jpg" id="3_iyy21"]
+[ext_resource type="Texture2D" uid="uid://bacuos4jemb5c" path="res://tomato.png" id="3_iyy21"]
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_xxn75"]
 animations = [{
@@ -31,7 +31,7 @@ script = ExtResource("1_wtcfe")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=815411615]
 position = Vector2(-0.8293291, 1.499999)
-scale = Vector2(0.19763164, 0.19910516)
+scale = Vector2(3, 3)
 sprite_frames = SubResource("SpriteFrames_xxn75")
 animation = &"tomato"
 

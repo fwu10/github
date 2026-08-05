@@ -20,11 +20,7 @@ func _spawn_ingredient() -> void:
 	get_parent().call_deferred("add_child", current_instance)
 	current_instance.ingredient_type = ingredient_type
 	
-	
-
 func _on_area_2d_input_event(_viewport: Node, event: InputEvent, _shape_idx: int) -> void:
 	if event is InputEventMouseButton and event.button_index == MOUSE_BUTTON_LEFT:
 		if not is_instance_valid(current_instance) or current_instance.is_in_group("on_sandwich"):
 			_spawn_ingredient()
-			
-			
