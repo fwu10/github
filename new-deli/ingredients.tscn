@@ -30,8 +30,8 @@ size = Vector2(93.5, 95)
 script = ExtResource("1_wtcfe")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=815411615]
-position = Vector2(-0.8293291, 1.499999)
-scale = Vector2(3, 3)
+position = Vector2(4.7683716e-07, 9.536743e-07)
+scale = Vector2(2.9375, 2.9375)
 sprite_frames = SubResource("SpriteFrames_xxn75")
 animation = &"tomato"
 

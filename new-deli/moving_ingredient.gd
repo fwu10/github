@@ -14,9 +14,6 @@ func _process(delta: float) -> void:
 		global_position = get_global_mouse_position() + mouse_offset
 func _on_area_2d_mouse_entered() -> void:
 	mouse_inside = true
-	
-
-
 func _on_area_2d_mouse_exited() -> void:
 	mouse_inside = false
 

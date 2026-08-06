@@ -19,7 +19,3 @@ func _on_area_2d_area_entered(area: Area2D) -> void:
 					print("tomato successfully placed on the sandwich")
 				"lettuce":
 					print("lettuce successfully placed on the sandwich")
-			
-
-
-		
