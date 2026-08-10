@@ -1,27 +1,7 @@
 [gd_scene format=3 uid="uid://cnxb7utrgno24"]
 
 [ext_resource type="Script" uid="uid://c5h76srpbneyk" path="res://moving_ingredient.gd" id="1_wtcfe"]
-[ext_resource type="Texture2D" uid="uid://k480mn02slf" path="res://lettuce.jpg" id="2_iyy21"]
-[ext_resource type="Texture2D" uid="uid://bacuos4jemb5c" path="res://tomato.png" id="3_iyy21"]
-
-[sub_resource type="SpriteFrames" id="SpriteFrames_xxn75"]
-animations = [{
-"frames": [{
-"duration": 1.0,
-"texture": ExtResource("2_iyy21")
-}],
-"loop": true,
-"name": &"lettuce",
-"speed": 5.0
-}, {
-"frames": [{
-"duration": 1.0,
-"texture": ExtResource("3_iyy21")
-}],
-"loop": true,
-"name": &"tomato",
-"speed": 5.0
-}]
+[ext_resource type="SpriteFrames" uid="uid://dtkcmej3d10qj" path="res://ingredients.tres" id="2_hhmh7"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_y32ns"]
 size = Vector2(93.5, 95)
@@ -32,8 +12,8 @@ script = ExtResource("1_wtcfe")
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=815411615]
 position = Vector2(4.7683716e-07, 9.536743e-07)
 scale = Vector2(2.9375, 2.9375)
-sprite_frames = SubResource("SpriteFrames_xxn75")
-animation = &"tomato"
+sprite_frames = ExtResource("2_hhmh7")
+animation = &"lettuce"
 
 [node name="Area2D" type="Area2D" parent="." unique_id=623153238]
 

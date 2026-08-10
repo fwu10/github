@@ -14,9 +14,15 @@ config/name="New-Deli"
 run/main_scene="uid://b1nfltw3sen6n"
 config/features=PackedStringArray("4.6", "Forward Plus")
 
+[editor]
+
+movie_writer/movie_file="C:/Users/felix/Documents/GitHub/github/new-deli/New folder/vertical_slice.avi"
+movie_writer/disable_vsync=true
+
 [global_group]
 
 sandwich=""
+order_board=""
 
 [physics]
 

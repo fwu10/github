@@ -29,10 +29,3 @@ offset_left = 1.0
 offset_top = 4.0
 offset_right = 267.0
 offset_bottom = 261.0
-
-[node name="RichTextLabel" type="RichTextLabel" parent="Control/Panel/VBoxContainer" unique_id=952104179]
-layout_mode = 2
-bbcode_enabled = true
-text = "sdfsdafasdf"
-fit_content = true
-scroll_active = false

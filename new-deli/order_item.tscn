@@ -1,0 +1,16 @@
+[gd_scene format=3 uid="uid://desmjc5d4pp17"]
+
+[ext_resource type="Script" uid="uid://cyhyf34qhvfp1" path="res://order_item.gd" id="1_ce5et"]
+[ext_resource type="SpriteFrames" uid="uid://dtkcmej3d10qj" path="res://ingredients.tres" id="2_1dce4"]
+
+[node name="OrderItem" type="HBoxContainer" unique_id=1052583905]
+offset_right = 40.0
+offset_bottom = 40.0
+script = ExtResource("1_ce5et")
+sprite_frames = ExtResource("2_1dce4")
+
+[node name="TextureRect" type="TextureRect" parent="." unique_id=811641256]
+layout_mode = 2
+
+[node name="Label" type="Label" parent="." unique_id=1945076441]
+layout_mode = 2
