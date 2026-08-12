@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://c3gq12iv0vp4l"
-path="res://.godot/imported/images.jpg-828aec76970545e387c8e5ec74aa0b53.ctex"
+uid="uid://nsh5ova13nv7"
+path="res://.godot/imported/mustard.png-9faa8626c9c0fc0ec34384170690f807.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://images.jpg"
-dest_files=["res://.godot/imported/images.jpg-828aec76970545e387c8e5ec74aa0b53.ctex"]
+source_file="res://Ingredients_moving/mustard.png"
+dest_files=["res://.godot/imported/mustard.png-9faa8626c9c0fc0ec34384170690f807.ctex"]
 
 [params]
 

@@ -4,7 +4,7 @@ var required_ingredients: Dictionary = {}
 var placed_ingredients: Dictionary = {}
 var order_ui: Dictionary = {} 
 var all_ingredients_types:= ["tomato", "lettuce","chedder","american","pickles","onions","jalapeno","olives","steak","chicken","tuna","meatballs","capcicum","edam"]
-var all_sauce_types:= ["ketchup","mayo","aioli","sweet_sour","hot_sauce","mint_sauce"]
+var all_sauce_types:= ["ketchup","mayo","aioli","mustard","hot_sauce","relish"]
 
 @onready var vbox = $Control/Panel/VBoxContainer
 var order_item_scene = preload("res://order_item.tscn")

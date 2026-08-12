@@ -1,12 +1,103 @@
 [gd_resource type="SpriteFrames" format=3 uid="uid://dtkcmej3d10qj"]
 
-[ext_resource type="Texture2D" uid="uid://bacuos4jemb5c" path="res://tomato.png" id="1_g1nhd"]
+[ext_resource type="Texture2D" uid="uid://dh0up10rr627g" path="res://Ingredients_moving/aioli.png" id="1_ih7qk"]
+[ext_resource type="Texture2D" uid="uid://c1i2k6lpouj30" path="res://Ingredients_moving/american.png" id="2_yh3da"]
+[ext_resource type="Texture2D" uid="uid://5o2ca7c8xpm6" path="res://Ingredients_moving/capcicum.png" id="3_rlv7e"]
+[ext_resource type="Texture2D" uid="uid://cme1pc71bhq60" path="res://Ingredients_moving/Cheddar.png" id="4_tivwd"]
+[ext_resource type="Texture2D" uid="uid://m2aic7f8cpfc" path="res://Ingredients_moving/chicken.png" id="5_wnwu1"]
+[ext_resource type="Texture2D" uid="uid://clrtd3s4tkqvf" path="res://Ingredients_moving/edam.png" id="6_b6bwm"]
+[ext_resource type="Texture2D" uid="uid://4w7uiq1wws1c" path="res://Ingredients_moving/hot_sauce.png" id="7_1rknq"]
+[ext_resource type="Texture2D" uid="uid://dubjhboupq734" path="res://Ingredients_moving/jalapeno.png" id="8_5pyf2"]
+[ext_resource type="Texture2D" uid="uid://bofcwf4uols7s" path="res://Ingredients_moving/ketchup.png" id="9_3g12n"]
+[ext_resource type="Texture2D" uid="uid://dskx325yksaoc" path="res://Ingredients_moving/mayo.png" id="10_qvhw5"]
+[ext_resource type="Texture2D" uid="uid://b2ucwx1xik67n" path="res://Ingredients_moving/lettuce.png" id="10_rlv7e"]
+[ext_resource type="Texture2D" uid="uid://c4o4tj0q2u6i2" path="res://Ingredients_moving/meatballs.png" id="11_h1581"]
+[ext_resource type="Texture2D" uid="uid://nsh5ova13nv7" path="res://Ingredients_moving/mustard.png" id="12_pfiov"]
+[ext_resource type="Texture2D" uid="uid://bukj0kan0htu7" path="res://Ingredients_moving/olives.png" id="13_wq0ku"]
+[ext_resource type="Texture2D" uid="uid://bhcagt4cxmerd" path="res://Ingredients_moving/onions.png" id="14_2qwt0"]
+[ext_resource type="Texture2D" uid="uid://bk43fdiq71plu" path="res://Ingredients_moving/pickles.png" id="15_sce2a"]
+[ext_resource type="Texture2D" uid="uid://se77tu4qy3bi" path="res://Ingredients_moving/relish.png" id="16_oxqkd"]
+[ext_resource type="Texture2D" uid="uid://dajv1bqshj03s" path="res://Ingredients_moving/steak.png" id="17_0tr43"]
+[ext_resource type="Texture2D" uid="uid://biwyv5mbr2f16" path="res://Ingredients_moving/tuna.png" id="18_672yf"]
+[ext_resource type="Texture2D" uid="uid://dsrfrcrtoerl5" path="res://Ingredients_moving/tomato.png" id="18_ih7qk"]
 
 [resource]
 animations = [{
 "frames": [{
 "duration": 1.0,
-"texture": ExtResource("1_g1nhd")
+"texture": ExtResource("1_ih7qk")
+}],
+"loop": true,
+"name": &"aioli",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("2_yh3da")
+}],
+"loop": true,
+"name": &"american",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("3_rlv7e")
+}],
+"loop": true,
+"name": &"capcicum",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("4_tivwd")
+}],
+"loop": true,
+"name": &"cheddar",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("5_wnwu1")
+}],
+"loop": true,
+"name": &"chicken",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("6_b6bwm")
+}],
+"loop": true,
+"name": &"edam",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("7_1rknq")
+}],
+"loop": true,
+"name": &"hot_sauce",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("8_5pyf2")
+}],
+"loop": true,
+"name": &"jalapeno",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("9_3g12n")
+}],
+"loop": true,
+"name": &"ketchup",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("10_rlv7e")
 }],
 "loop": true,
 "name": &"lettuce",
@@ -14,9 +105,81 @@ animations = [{
 }, {
 "frames": [{
 "duration": 1.0,
-"texture": ExtResource("1_g1nhd")
+"texture": ExtResource("10_qvhw5")
+}],
+"loop": true,
+"name": &"mayo",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("11_h1581")
+}],
+"loop": true,
+"name": &"meatballs",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("12_pfiov")
+}],
+"loop": true,
+"name": &"mustard",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("13_wq0ku")
+}],
+"loop": true,
+"name": &"olives",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("14_2qwt0")
+}],
+"loop": true,
+"name": &"onions",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("15_sce2a")
+}],
+"loop": true,
+"name": &"pickles",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("16_oxqkd")
+}],
+"loop": true,
+"name": &"relish",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("17_0tr43")
+}],
+"loop": true,
+"name": &"steak",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("18_ih7qk")
 }],
 "loop": true,
 "name": &"tomato",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("18_672yf")
+}],
+"loop": true,
+"name": &"tuna",
 "speed": 5.0
 }]

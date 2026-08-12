@@ -10,14 +10,14 @@ size = Vector2(93.5, 95)
 script = ExtResource("1_wtcfe")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=815411615]
-position = Vector2(4.7683716e-07, 9.536743e-07)
-scale = Vector2(2.9375, 2.9375)
+position = Vector2(-4, 6)
 sprite_frames = ExtResource("2_hhmh7")
 animation = &"lettuce"
 
 [node name="Area2D" type="Area2D" parent="." unique_id=623153238]
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D" unique_id=638841702]
+position = Vector2(-2, 1)
 shape = SubResource("RectangleShape2D_y32ns")
 
 [connection signal="area_entered" from="Area2D" to="." method="_on_area_2d_area_entered"]
