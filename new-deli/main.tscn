@@ -14,89 +14,89 @@ script = ExtResource("1_1bvp3")
 [node name="Bench1" type="Node2D" parent="." unique_id=1483968556]
 
 [node name="sandwich" parent="Bench1" unique_id=1215365694 instance=ExtResource("2_0xm2m")]
-position = Vector2(416, 177)
+position = Vector2(561, 415)
 
 [node name="required_ingredients" parent="Bench1" unique_id=1535754744 groups=["order_board"] instance=ExtResource("4_7mycd")]
-position = Vector2(629, -165)
+position = Vector2(612, -167)
 
 [node name="tomato" parent="Bench1" unique_id=461560794 instance=ExtResource("1_ig7tw")]
-position = Vector2(241, 348)
+position = Vector2(386, 586)
 ingredient_type = "tomato"
 
 [node name="pickles" parent="Bench1" unique_id=1965745833 instance=ExtResource("1_ig7tw")]
-position = Vector2(462, 278)
+position = Vector2(607, 516)
 ingredient_type = "pickles"
 
 [node name="onions" parent="Bench1" unique_id=2131316429 instance=ExtResource("1_ig7tw")]
-position = Vector2(191, 348)
+position = Vector2(336, 586)
 ingredient_type = "onions"
 
 [node name="jalapenos" parent="Bench1" unique_id=1748117359 instance=ExtResource("1_ig7tw")]
-position = Vector2(137, 284)
+position = Vector2(282, 522)
 ingredient_type = "jalapeno"
 
 [node name="olives" parent="Bench1" unique_id=921865410 instance=ExtResource("1_ig7tw")]
-position = Vector2(192, 285)
+position = Vector2(337, 523)
 ingredient_type = "olives"
 
 [node name="capcicum" parent="Bench1" unique_id=668002391 instance=ExtResource("1_ig7tw")]
-position = Vector2(244, 284)
+position = Vector2(389, 522)
 ingredient_type = "capcicum"
 
 [node name="steak" parent="Bench1" unique_id=1079962756 instance=ExtResource("1_ig7tw")]
-position = Vector2(577, 352)
+position = Vector2(722, 590)
 ingredient_type = "steak"
 
 [node name="chicken" parent="Bench1" unique_id=861367503 instance=ExtResource("1_ig7tw")]
-position = Vector2(297, 286)
+position = Vector2(442, 524)
 ingredient_type = "chicken"
 
 [node name="tuna" parent="Bench1" unique_id=1299016641 instance=ExtResource("1_ig7tw")]
-position = Vector2(618, 285)
+position = Vector2(763, 523)
 ingredient_type = "tuna"
 
 [node name="meatballs" parent="Bench1" unique_id=1633979613 instance=ExtResource("1_ig7tw")]
-position = Vector2(566, 286)
+position = Vector2(711, 524)
 ingredient_type = "meatballs"
 
 [node name="cheddar" parent="Bench1" unique_id=1222944189 instance=ExtResource("1_ig7tw")]
-position = Vector2(404, 287)
+position = Vector2(549, 525)
 ingredient_type = "cheddar"
 
 [node name="american" parent="Bench1" unique_id=663178595 instance=ExtResource("1_ig7tw")]
-position = Vector2(527, 349)
+position = Vector2(672, 587)
 ingredient_type = "american"
 
 [node name="edam" parent="Bench1" unique_id=1639008825 instance=ExtResource("1_ig7tw")]
-position = Vector2(295, 351)
+position = Vector2(440, 589)
 ingredient_type = "edam"
 
 [node name="ketchup" parent="Bench1" unique_id=669465183 instance=ExtResource("1_ig7tw")]
-position = Vector2(464, 354)
+position = Vector2(609, 592)
 ingredient_type = "ketchup"
 
 [node name="mayo" parent="Bench1" unique_id=1499343112 instance=ExtResource("1_ig7tw")]
-position = Vector2(351, 350)
+position = Vector2(496, 588)
 ingredient_type = "mayo"
 
 [node name="aioli" parent="Bench1" unique_id=229283149 instance=ExtResource("1_ig7tw")]
-position = Vector2(407, 344)
+position = Vector2(552, 582)
 ingredient_type = "aioli"
 
 [node name="hot_sauce" parent="Bench1" unique_id=1529647703 instance=ExtResource("1_ig7tw")]
-position = Vector2(135, 344)
+position = Vector2(280, 582)
 ingredient_type = "hot_sauce"
 
 [node name="relish" parent="Bench1" unique_id=1784230018 instance=ExtResource("1_ig7tw")]
-position = Vector2(350, 287)
+position = Vector2(495, 525)
 ingredient_type = "relish"
 
 [node name="mustard" parent="Bench1" unique_id=723822450 instance=ExtResource("1_ig7tw")]
-position = Vector2(629, 346)
+position = Vector2(774, 584)
 ingredient_type = "mustard"
 
 [node name="lettuce" parent="Bench1" unique_id=1064231243 instance=ExtResource("1_ig7tw")]
-position = Vector2(512, 287)
+position = Vector2(657, 525)
 ingredient_type = "lettuce"
 
 [node name="Area2D" type="Area2D" parent="." unique_id=276369202]

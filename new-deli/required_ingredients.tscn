@@ -15,6 +15,7 @@ offset_top = 32.0
 offset_right = 384.0
 offset_bottom = 269.0
 theme = SubResource("Theme_wto5j")
+metadata/_edit_use_anchors_ = true
 
 [node name="Panel" type="Panel" parent="Control" unique_id=1416051584]
 layout_mode = 0
@@ -22,10 +23,16 @@ offset_left = 203.0
 offset_top = 136.0
 offset_right = 475.0
 offset_bottom = 395.0
+metadata/_edit_use_anchors_ = true
 
-[node name="VBoxContainer" type="VBoxContainer" parent="Control/Panel" unique_id=2123913877]
-layout_mode = 0
-offset_left = 1.0
-offset_top = 4.0
-offset_right = 267.0
-offset_bottom = 261.0
+[node name="ScrollContainer" type="ScrollContainer" parent="Control/Panel" unique_id=172231772]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="VBoxContainer" type="VBoxContainer" parent="Control/Panel/ScrollContainer" unique_id=1062722290]
+layout_mode = 2
+metadata/_edit_use_anchors_ = true

@@ -16,3 +16,9 @@ func mark_complete() -> void:
 		return
 	is_completed = true
 	label.add_theme_color_override("font_color", Color.GREEN)
+
+func mark_incomplete() -> void:
+	if not is_completed:
+		return
+	is_completed = false
+	label.add_theme_color_override("font_color", Color.WHITE)

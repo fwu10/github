@@ -3,10 +3,10 @@ extends Node2D
 var required_ingredients: Dictionary = {}
 var placed_ingredients: Dictionary = {}
 var order_ui: Dictionary = {} 
-var all_ingredients_types:= ["tomato", "lettuce","chedder","american","pickles","onions","jalapeno","olives","steak","chicken","tuna","meatballs","capcicum","edam"]
+var all_ingredients_types:= ["tomato", "lettuce","cheddar","american","pickles","onions","jalapeno","olives","steak","chicken","tuna","meatballs","capcicum","edam"]
 var all_sauce_types:= ["ketchup","mayo","aioli","mustard","hot_sauce","relish"]
 
-@onready var vbox = $Control/Panel/VBoxContainer
+@onready var vbox = $Control/Panel/ScrollContainer/VBoxContainer
 var order_item_scene = preload("res://order_item.tscn")
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
@@ -21,7 +21,11 @@ func _generate_order() -> void:
 		var item = order_item_scene.instantiate()
 		vbox.add_child(item)
 		item.setup(type)
-		order_ui[type] = item
+		
+		if not order_ui.has(type):
+			order_ui[type] = []
+		order_ui[type].append(item)
+		
 func _generate_sauce() -> void:
 	var num_ingredients = 2
 	for i in num_ingredients:
@@ -30,14 +34,33 @@ func _generate_sauce() -> void:
 		var item = order_item_scene.instantiate()
 		vbox.add_child(item)
 		item.setup(type)
-		order_ui[type] = item
+		
+		if not order_ui.has(type):
+			order_ui[type] = []
+		order_ui[type].append(item)
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta: float) -> void:
 	pass
 	
 
 func mark_placed(type: String) -> void:
-	if order_ui.has(type):
-		order_ui[type].mark_complete()
-		
-	
+	if not order_ui.has(type):
+		return
+	var count = placed_ingredients.get(type, 0)
+	if count < order_ui[type].size():
+		order_ui[type][count].mark_complete()
+		placed_ingredients[type] = count + 1
+
+func mark_unplaced(type: String) -> void:
+		if not order_ui.has(type):
+			return
+		var count = placed_ingredients.get(type, 0)
+		if count > 0:
+			order_ui[type][count - 1].mark_incomplete()
+			placed_ingredients[type] = count - 1
+			
+func complete_order_board() -> void:
+	for type in required_ingredients:
+		if placed_ingredients.get(type, 0) < required_ingredients[type]:
+			return
+		print("order complete")
