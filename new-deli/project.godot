@@ -16,7 +16,7 @@ config/features=PackedStringArray("4.6", "Forward Plus")
 
 [editor]
 
-movie_writer/movie_file="C:/Users/felix/Documents/GitHub/github/new-deli/New folder/vertical_slice.avi"
+movie_writer/movie_file="C:/Users/felix/Documents/GitHub/github/new-deli/Recordings/.avi"
 movie_writer/disable_vsync=true
 
 [global_group]

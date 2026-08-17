@@ -50,17 +50,31 @@ func mark_placed(type: String) -> void:
 	if count < order_ui[type].size():
 		order_ui[type][count].mark_complete()
 		placed_ingredients[type] = count + 1
-
+		complete_order_board()
+		
 func mark_unplaced(type: String) -> void:
-		if not order_ui.has(type):
-			return
-		var count = placed_ingredients.get(type, 0)
-		if count > 0:
-			order_ui[type][count - 1].mark_incomplete()
-			placed_ingredients[type] = count - 1
+	if not order_ui.has(type):
+		return
+	var count = placed_ingredients.get(type, 0)
+	if count > 0:
+		order_ui[type][count - 1].mark_incomplete()
+		placed_ingredients[type] = count - 1
+		complete_order_board()
 			
 func complete_order_board() -> void:
 	for type in required_ingredients:
 		if placed_ingredients.get(type, 0) < required_ingredients[type]:
 			return
-		print("order complete")
+	print("order complete")
+	reset_order_board()
+
+func reset_order_board() -> void:
+	for child in vbox.get_children():
+		child.queue_free()
+	_clear_sandwich()
+	required_ingredients.clear()
+	placed_ingredients.clear()
+	order_ui.clear()
+	_generate_order()
+	_generate_sauce()
+	
