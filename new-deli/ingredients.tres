@@ -28,7 +28,7 @@ animations = [{
 "texture": ExtResource("1_ih7qk")
 }],
 "loop": true,
-"name": &"aioli",
+"name": &"Aioli",
 "speed": 5.0
 }, {
 "frames": [{
@@ -36,7 +36,7 @@ animations = [{
 "texture": ExtResource("2_yh3da")
 }],
 "loop": true,
-"name": &"american",
+"name": &"American",
 "speed": 5.0
 }, {
 "frames": [{
@@ -44,7 +44,7 @@ animations = [{
 "texture": ExtResource("3_rlv7e")
 }],
 "loop": true,
-"name": &"capcicum",
+"name": &"Capcicum",
 "speed": 5.0
 }, {
 "frames": [{
@@ -52,7 +52,7 @@ animations = [{
 "texture": ExtResource("4_tivwd")
 }],
 "loop": true,
-"name": &"cheddar",
+"name": &"Cheddar",
 "speed": 5.0
 }, {
 "frames": [{
@@ -60,7 +60,7 @@ animations = [{
 "texture": ExtResource("5_wnwu1")
 }],
 "loop": true,
-"name": &"chicken",
+"name": &"Chicken",
 "speed": 5.0
 }, {
 "frames": [{
@@ -68,7 +68,7 @@ animations = [{
 "texture": ExtResource("6_b6bwm")
 }],
 "loop": true,
-"name": &"edam",
+"name": &"Edam",
 "speed": 5.0
 }, {
 "frames": [{
@@ -76,7 +76,7 @@ animations = [{
 "texture": ExtResource("7_1rknq")
 }],
 "loop": true,
-"name": &"hot_sauce",
+"name": &"Hot_Sauce",
 "speed": 5.0
 }, {
 "frames": [{
@@ -84,7 +84,7 @@ animations = [{
 "texture": ExtResource("8_5pyf2")
 }],
 "loop": true,
-"name": &"jalapeno",
+"name": &"Jalapeno",
 "speed": 5.0
 }, {
 "frames": [{
@@ -92,7 +92,7 @@ animations = [{
 "texture": ExtResource("9_3g12n")
 }],
 "loop": true,
-"name": &"ketchup",
+"name": &"Ketchup",
 "speed": 5.0
 }, {
 "frames": [{
@@ -100,7 +100,7 @@ animations = [{
 "texture": ExtResource("10_rlv7e")
 }],
 "loop": true,
-"name": &"lettuce",
+"name": &"Lettuce",
 "speed": 5.0
 }, {
 "frames": [{
@@ -108,7 +108,7 @@ animations = [{
 "texture": ExtResource("10_qvhw5")
 }],
 "loop": true,
-"name": &"mayo",
+"name": &"Mayo",
 "speed": 5.0
 }, {
 "frames": [{
@@ -116,7 +116,7 @@ animations = [{
 "texture": ExtResource("11_h1581")
 }],
 "loop": true,
-"name": &"meatballs",
+"name": &"Meatballs",
 "speed": 5.0
 }, {
 "frames": [{
@@ -124,7 +124,7 @@ animations = [{
 "texture": ExtResource("12_pfiov")
 }],
 "loop": true,
-"name": &"mustard",
+"name": &"Mustard",
 "speed": 5.0
 }, {
 "frames": [{
@@ -132,7 +132,7 @@ animations = [{
 "texture": ExtResource("13_wq0ku")
 }],
 "loop": true,
-"name": &"olives",
+"name": &"Olives",
 "speed": 5.0
 }, {
 "frames": [{
@@ -140,7 +140,7 @@ animations = [{
 "texture": ExtResource("14_2qwt0")
 }],
 "loop": true,
-"name": &"onions",
+"name": &"Onions",
 "speed": 5.0
 }, {
 "frames": [{
@@ -148,7 +148,7 @@ animations = [{
 "texture": ExtResource("15_sce2a")
 }],
 "loop": true,
-"name": &"pickles",
+"name": &"Pickles",
 "speed": 5.0
 }, {
 "frames": [{
@@ -156,7 +156,7 @@ animations = [{
 "texture": ExtResource("16_oxqkd")
 }],
 "loop": true,
-"name": &"relish",
+"name": &"Relish",
 "speed": 5.0
 }, {
 "frames": [{
@@ -164,7 +164,7 @@ animations = [{
 "texture": ExtResource("17_0tr43")
 }],
 "loop": true,
-"name": &"steak",
+"name": &"Steak",
 "speed": 5.0
 }, {
 "frames": [{
@@ -172,7 +172,7 @@ animations = [{
 "texture": ExtResource("18_ih7qk")
 }],
 "loop": true,
-"name": &"tomato",
+"name": &"Tomato",
 "speed": 5.0
 }, {
 "frames": [{
@@ -180,6 +180,6 @@ animations = [{
 "texture": ExtResource("18_672yf")
 }],
 "loop": true,
-"name": &"tuna",
+"name": &"Tuna",
 "speed": 5.0
 }]

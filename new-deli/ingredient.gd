@@ -2,10 +2,13 @@ extends Node2D
 var current_instance: Node = null
 @export var ingredient_type: String
 @onready var animated_sprite: AnimatedSprite2D = $AnimatedSprite2D
+@onready var hover_label: Label = $Label
 
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
 	animated_sprite.play(ingredient_type)
+	hover_label.text = ingredient_type.replace("_", " ")
+	hover_label.visible = false
 	
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
@@ -23,3 +26,10 @@ func _on_area_2d_input_event(_viewport: Node, event: InputEvent, _shape_idx: int
 	if event is InputEventMouseButton and event.button_index == MOUSE_BUTTON_LEFT:
 		if not is_instance_valid(current_instance) or current_instance.is_in_group("on_sandwich"):
 			_spawn_ingredient()
+
+
+
+func _on_area_2d_mouse_entered() -> void:
+	hover_label.visible = true
+func _on_area_2d_mouse_exited() -> void:
+	hover_label.visible = false

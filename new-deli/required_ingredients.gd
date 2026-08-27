@@ -3,8 +3,8 @@ extends Node2D
 var required_ingredients: Dictionary = {}
 var placed_ingredients: Dictionary = {}
 var order_ui: Dictionary = {} 
-var all_ingredients_types:= ["tomato", "lettuce","cheddar","american","pickles","onions","jalapeno","olives","steak","chicken","tuna","meatballs","capcicum","edam"]
-var all_sauce_types:= ["ketchup","mayo","aioli","mustard","hot_sauce","relish"]
+var all_ingredients_types:= ["Tomato", "Lettuce","Cheddar","American","Pickles","Onions","Jalapeno","Olives","Steak","Chicken","Tuna","Meatballs","Capcicum","Edam"]
+var all_sauce_types:= ["Ketchup","Mayo","Aioli","Mustard","Hot_Sauce","Relish"]
 
 @onready var vbox = $Control/Panel/ScrollContainer/VBoxContainer
 var order_item_scene = preload("res://order_item.tscn")
@@ -71,7 +71,7 @@ func complete_order_board() -> void:
 func reset_order_board() -> void:
 	for child in vbox.get_children():
 		child.queue_free()
-	_clear_sandwich()
+	#sandwich.clear()
 	required_ingredients.clear()
 	placed_ingredients.clear()
 	order_ui.clear()
