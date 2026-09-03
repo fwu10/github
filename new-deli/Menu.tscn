@@ -1,0 +1,27 @@
+[gd_scene format=3 uid="uid://bnmugagej37me"]
+
+[ext_resource type="Texture2D" uid="uid://be4i1chpyv2m" path="res://menuTHREE.png" id="1_0fbet"]
+[ext_resource type="Script" uid="uid://cphbdydojdvbi" path="res://menu.gd" id="1_5yleq"]
+
+[node name="Menu" type="Control" unique_id=1325391505]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 1.0
+offset_top = -3.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_5yleq")
+
+[node name="TextureRect" type="TextureRect" parent="." unique_id=569635383]
+layout_mode = 0
+offset_top = 1.0
+offset_right = 1153.0
+offset_bottom = 650.0
+texture = ExtResource("1_0fbet")
+
+[node name="TextureButton" type="TextureButton" parent="." unique_id=490162898]
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 40.0

@@ -1,5 +1,5 @@
 extends Node2D
-
+signal kill_all_moving_ingredients
 var required_ingredients: Dictionary = {}
 var placed_ingredients: Dictionary = {}
 var order_ui: Dictionary = {} 
@@ -67,11 +67,11 @@ func complete_order_board() -> void:
 			return
 	print("order complete")
 	reset_order_board()
+	kill_all_moving_ingredients.emit()
 
 func reset_order_board() -> void:
 	for child in vbox.get_children():
 		child.queue_free()
-	#sandwich.clear()
 	required_ingredients.clear()
 	placed_ingredients.clear()
 	order_ui.clear()

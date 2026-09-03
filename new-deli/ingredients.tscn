@@ -13,6 +13,7 @@ script = ExtResource("1_wtcfe")
 position = Vector2(-1, 2.5)
 scale = Vector2(0.94, 0.93)
 sprite_frames = ExtResource("2_hhmh7")
+animation = &"Aioli"
 
 [node name="Area2D" type="Area2D" parent="." unique_id=623153238]
 

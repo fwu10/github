@@ -6,7 +6,6 @@
 [ext_resource type="PackedScene" uid="uid://b1nfltw3sen6n" path="res://required_ingredients.tscn" id="4_7mycd"]
 [ext_resource type="Script" uid="uid://bskh1ii6sxpl1" path="res://bench_switch.gd" id="4_lquwl"]
 [ext_resource type="PackedScene" uid="uid://c436a50v0p8rt" path="res://character.tscn" id="5_7mycd"]
-[ext_resource type="PackedScene" uid="uid://bnmugagej37me" path="res://Menu.tscn" id="7_272bh"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_1bvp3"]
 
@@ -112,8 +111,5 @@ position = Vector2(35, 36)
 shape = SubResource("RectangleShape2D_1bvp3")
 
 [node name="Bench2" type="Node2D" parent="." unique_id=52150766]
-
-[node name="Menu" parent="." unique_id=1325391505 instance=ExtResource("7_272bh")]
-visible = false
 
 [connection signal="input_event" from="Area2D" to="Area2D" method="_on_input_event"]

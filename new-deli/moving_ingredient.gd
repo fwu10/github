@@ -8,6 +8,11 @@ var on_sandwich := false
 
 func _ready() -> void:
 	animated_sprite.play(ingredient_type)
+	var board = get_tree().get_first_node_in_group("order_board")
+	if board:
+		board.kill_all_moving_ingredients.connect(_kill_moving_ingredients)
+func _kill_moving_ingredients() -> void:
+	queue_free()
 	
 func _process(delta: float) -> void:
 	if dragging:
@@ -53,6 +58,4 @@ func _on_area_2d_area_exited(area: Area2D) -> void:
 		var board = get_tree().get_first_node_in_group("order_board")
 		if board:
 			board.mark_unplaced(ingredient_type)
-		
-		
 		

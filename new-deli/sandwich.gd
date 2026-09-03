@@ -18,3 +18,4 @@ func _on_area_2d_area_entered(area: Area2D) -> void:
 		if board:
 			board.mark_placed(draggable.ingredient_type)
 			
+ 
