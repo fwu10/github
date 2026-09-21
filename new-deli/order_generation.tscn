@@ -1,0 +1,23 @@
+[gd_scene format=3 uid="uid://0x7suocpugy5"]
+
+[ext_resource type="Script" uid="uid://divltyyfjd7tn" path="res://order_generation.gd" id="1_6rett"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_6rett"]
+
+[node name="Order_Generation" type="Control" unique_id=1560452680 groups=["order_board"]]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_6rett")
+
+[node name="Panel" type="Panel" parent="." unique_id=1373255344]
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 40.0
+theme_override_styles/panel = SubResource("StyleBoxEmpty_6rett")
+
+[node name="VBoxContainer" type="VBoxContainer" parent="Panel" unique_id=870696851]
+layout_mode = 1

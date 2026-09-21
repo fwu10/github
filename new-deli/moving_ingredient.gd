@@ -3,6 +3,7 @@ var dragging := false
 var mouse_offset := Vector2.ZERO
 var mouse_inside = false
 var on_sandwich := false
+signal clear_sandwich
 @export var ingredient_type: String
 @onready var animated_sprite: AnimatedSprite2D = $AnimatedSprite2D
 
@@ -10,8 +11,8 @@ func _ready() -> void:
 	animated_sprite.play(ingredient_type)
 	var board = get_tree().get_first_node_in_group("order_board")
 	if board:
-		board.kill_all_moving_ingredients.connect(_kill_moving_ingredients)
-func _kill_moving_ingredients() -> void:
+		board.clear_sandwich.connect(_clear_sandwich)
+func _clear_sandwich() -> void:
 	queue_free()
 	
 func _process(delta: float) -> void:

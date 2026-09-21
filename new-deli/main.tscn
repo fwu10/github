@@ -3,14 +3,15 @@
 [ext_resource type="Script" uid="uid://bido85t4akm4v" path="res://main.gd" id="1_1bvp3"]
 [ext_resource type="PackedScene" uid="uid://dwi7h75gypymq" path="res://host_ingredient.tscn" id="1_ig7tw"]
 [ext_resource type="PackedScene" uid="uid://dhbdmgabnbow5" path="res://sandwich.tscn" id="2_0xm2m"]
-[ext_resource type="PackedScene" uid="uid://b1nfltw3sen6n" path="res://required_ingredients.tscn" id="4_7mycd"]
 [ext_resource type="Script" uid="uid://bskh1ii6sxpl1" path="res://bench_switch.gd" id="4_lquwl"]
 [ext_resource type="PackedScene" uid="uid://c436a50v0p8rt" path="res://character.tscn" id="5_7mycd"]
+[ext_resource type="PackedScene" uid="uid://0x7suocpugy5" path="res://order_generation.tscn" id="5_272bh"]
 [ext_resource type="PackedScene" uid="uid://bnmugagej37me" path="res://Menu.tscn" id="7_272bh"]
+[ext_resource type="Texture2D" uid="uid://cpj0pwtei01h1" path="res://Textures/play.png" id="8_5vw27"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_1bvp3"]
 
-[node name="main" type="Node2D" unique_id=1784249760]
+[node name="main" type="Node2D" unique_id=1784249760 groups=["main"]]
 script = ExtResource("1_1bvp3")
 
 [node name="Bench1" type="Node2D" parent="." unique_id=1483968556]
@@ -18,97 +19,106 @@ script = ExtResource("1_1bvp3")
 [node name="sandwich" parent="Bench1" unique_id=1215365694 instance=ExtResource("2_0xm2m")]
 position = Vector2(527, 384)
 
-[node name="required_ingredients" parent="Bench1" unique_id=1535754744 groups=["order_board"] instance=ExtResource("4_7mycd")]
-position = Vector2(612, -167)
+[node name="Character" parent="Bench1" unique_id=1096973992 instance=ExtResource("5_7mycd")]
+position = Vector2(632, 157)
 
-[node name="tomato" parent="Bench1" unique_id=461560794 instance=ExtResource("1_ig7tw")]
-position = Vector2(386, 550)
-ingredient_type = "Tomato"
+[node name="Order_Generation" parent="Bench1" unique_id=1560452680 instance=ExtResource("5_272bh")]
 
-[node name="pickles" parent="Bench1" unique_id=1965745833 instance=ExtResource("1_ig7tw")]
-position = Vector2(607, 475)
-ingredient_type = "Pickles"
+[node name="Node2D" type="Node2D" parent="Bench1" unique_id=759345909]
 
-[node name="onions" parent="Bench1" unique_id=2131316429 instance=ExtResource("1_ig7tw")]
-position = Vector2(336, 550)
-ingredient_type = "Onions"
+[node name="Veggies" type="Sprite2D" parent="Bench1/Node2D" unique_id=45062008]
 
-[node name="jalapenos" parent="Bench1" unique_id=1748117359 instance=ExtResource("1_ig7tw")]
-position = Vector2(282, 475)
-ingredient_type = "Jalapeno"
-
-[node name="olives" parent="Bench1" unique_id=921865410 instance=ExtResource("1_ig7tw")]
-position = Vector2(337, 475)
-ingredient_type = "Olives"
-
-[node name="capcicum" parent="Bench1" unique_id=668002391 instance=ExtResource("1_ig7tw")]
+[node name="capcicum" parent="Bench1/Node2D" unique_id=668002391 instance=ExtResource("1_ig7tw")]
 position = Vector2(389, 475)
 ingredient_type = "Capcicum"
 
-[node name="steak" parent="Bench1" unique_id=1079962756 instance=ExtResource("1_ig7tw")]
-position = Vector2(722, 550)
-ingredient_type = "Steak"
+[node name="olives" parent="Bench1/Node2D" unique_id=921865410 instance=ExtResource("1_ig7tw")]
+position = Vector2(337, 475)
+ingredient_type = "Olives"
 
-[node name="chicken" parent="Bench1" unique_id=861367503 instance=ExtResource("1_ig7tw")]
-position = Vector2(442, 475)
-ingredient_type = "Chicken"
+[node name="jalapenos" parent="Bench1/Node2D" unique_id=1748117359 instance=ExtResource("1_ig7tw")]
+position = Vector2(282, 475)
+ingredient_type = "Jalapeno"
 
-[node name="tuna" parent="Bench1" unique_id=1299016641 instance=ExtResource("1_ig7tw")]
-position = Vector2(763, 475)
-ingredient_type = "Tuna"
+[node name="onions" parent="Bench1/Node2D" unique_id=2131316429 instance=ExtResource("1_ig7tw")]
+position = Vector2(336, 550)
+ingredient_type = "Onions"
 
-[node name="meatballs" parent="Bench1" unique_id=1633979613 instance=ExtResource("1_ig7tw")]
-position = Vector2(711, 475)
-ingredient_type = "Meatballs"
+[node name="pickles" parent="Bench1/Node2D" unique_id=1965745833 instance=ExtResource("1_ig7tw")]
+position = Vector2(607, 475)
+ingredient_type = "Pickles"
 
-[node name="cheddar" parent="Bench1" unique_id=1222944189 instance=ExtResource("1_ig7tw")]
-position = Vector2(552, 475)
-ingredient_type = "Cheddar"
+[node name="tomato" parent="Bench1/Node2D" unique_id=461560794 instance=ExtResource("1_ig7tw")]
+position = Vector2(386, 550)
+ingredient_type = "Tomato"
 
-[node name="american" parent="Bench1" unique_id=663178595 instance=ExtResource("1_ig7tw")]
-position = Vector2(672, 550)
-ingredient_type = "American"
-
-[node name="edam" parent="Bench1" unique_id=1639008825 instance=ExtResource("1_ig7tw")]
-position = Vector2(440, 550)
-ingredient_type = "Edam"
-
-[node name="ketchup" parent="Bench1" unique_id=669465183 instance=ExtResource("1_ig7tw")]
-position = Vector2(609, 550)
-ingredient_type = "Ketchup"
-
-[node name="mayo" parent="Bench1" unique_id=1499343112 instance=ExtResource("1_ig7tw")]
-position = Vector2(496, 550)
-ingredient_type = "Mayo"
-
-[node name="aioli" parent="Bench1" unique_id=229283149 instance=ExtResource("1_ig7tw")]
-position = Vector2(552, 550)
-ingredient_type = "Aioli"
-
-[node name="hot_sauce" parent="Bench1" unique_id=1529647703 instance=ExtResource("1_ig7tw")]
-position = Vector2(280, 550)
-ingredient_type = "Hot_Sauce"
-
-[node name="relish" parent="Bench1" unique_id=1784230018 instance=ExtResource("1_ig7tw")]
-position = Vector2(495, 475)
-ingredient_type = "Relish"
-
-[node name="mustard" parent="Bench1" unique_id=723822450 instance=ExtResource("1_ig7tw")]
-position = Vector2(774, 550)
-ingredient_type = "Mustard"
-
-[node name="lettuce" parent="Bench1" unique_id=1064231243 instance=ExtResource("1_ig7tw")]
+[node name="lettuce" parent="Bench1/Node2D" unique_id=1064231243 instance=ExtResource("1_ig7tw")]
 position = Vector2(657, 475)
 ingredient_type = "Lettuce"
 
-[node name="Character" parent="Bench1" unique_id=1096973992 instance=ExtResource("5_7mycd")]
-position = Vector2(632, 157)
+[node name="Protien" type="Sprite2D" parent="Bench1" unique_id=1505519947]
+
+[node name="meatballs" parent="Bench1/Protien" unique_id=1633979613 instance=ExtResource("1_ig7tw")]
+position = Vector2(711, 475)
+ingredient_type = "Meatballs"
+
+[node name="tuna" parent="Bench1/Protien" unique_id=1299016641 instance=ExtResource("1_ig7tw")]
+position = Vector2(763, 475)
+ingredient_type = "Tuna"
+
+[node name="chicken" parent="Bench1/Protien" unique_id=861367503 instance=ExtResource("1_ig7tw")]
+position = Vector2(442, 475)
+ingredient_type = "Chicken"
+
+[node name="steak" parent="Bench1/Protien" unique_id=1079962756 instance=ExtResource("1_ig7tw")]
+position = Vector2(722, 550)
+ingredient_type = "Steak"
+
+[node name="Cheese" type="Sprite2D" parent="Bench1" unique_id=184315029]
+
+[node name="edam" parent="Bench1/Cheese" unique_id=1639008825 instance=ExtResource("1_ig7tw")]
+position = Vector2(440, 550)
+ingredient_type = "Edam"
+
+[node name="american" parent="Bench1/Cheese" unique_id=663178595 instance=ExtResource("1_ig7tw")]
+position = Vector2(672, 550)
+ingredient_type = "American"
+
+[node name="cheddar" parent="Bench1/Cheese" unique_id=1222944189 instance=ExtResource("1_ig7tw")]
+position = Vector2(552, 475)
+ingredient_type = "Cheddar"
+
+[node name="Sauce" type="Sprite2D" parent="Bench1" unique_id=1420764637]
+
+[node name="mustard" parent="Bench1/Sauce" unique_id=723822450 instance=ExtResource("1_ig7tw")]
+position = Vector2(774, 550)
+ingredient_type = "Mustard"
+
+[node name="relish" parent="Bench1/Sauce" unique_id=1784230018 instance=ExtResource("1_ig7tw")]
+position = Vector2(495, 475)
+ingredient_type = "Relish"
+
+[node name="hot_sauce" parent="Bench1/Sauce" unique_id=1529647703 instance=ExtResource("1_ig7tw")]
+position = Vector2(280, 550)
+ingredient_type = "Hot_Sauce"
+
+[node name="aioli" parent="Bench1/Sauce" unique_id=229283149 instance=ExtResource("1_ig7tw")]
+position = Vector2(552, 550)
+ingredient_type = "Aioli"
+
+[node name="mayo" parent="Bench1/Sauce" unique_id=1499343112 instance=ExtResource("1_ig7tw")]
+position = Vector2(496, 550)
+ingredient_type = "Mayo"
+
+[node name="ketchup" parent="Bench1/Sauce" unique_id=669465183 instance=ExtResource("1_ig7tw")]
+position = Vector2(609, 550)
+ingredient_type = "Ketchup"
 
 [node name="Area2D" type="Area2D" parent="." unique_id=276369202]
 script = ExtResource("4_lquwl")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D" unique_id=1303280938]
-position = Vector2(35, 36)
+position = Vector2(1128, 29)
 shape = SubResource("RectangleShape2D_1bvp3")
 
 [node name="Bench2" type="Node2D" parent="." unique_id=52150766]
@@ -116,4 +126,12 @@ shape = SubResource("RectangleShape2D_1bvp3")
 [node name="Menu" parent="." unique_id=1325391505 instance=ExtResource("7_272bh")]
 visible = false
 
+[node name="TextureButton" type="TextureButton" parent="." unique_id=1547014558]
+offset_left = 880.0
+offset_top = 498.0
+offset_right = 1300.0
+offset_bottom = 588.0
+texture_normal = ExtResource("8_5vw27")
+
 [connection signal="input_event" from="Area2D" to="Area2D" method="_on_input_event"]
+[connection signal="pressed" from="TextureButton" to="." method="_on_texture_button_pressed"]
