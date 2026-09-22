@@ -1,7 +1,7 @@
 extends Control
 @onready var done_button = get_tree().get_first_node_in_group("main")
 signal clear_sandwich
-signal rating_update
+signal rating_changed
 var wrong_ingredient_placed = 0
 var rating = 2.5
 var correct_streak = 0
@@ -90,7 +90,7 @@ func _order_correct() -> void:
 	if correct_streak >= 3:
 		rating = min(rating + 0.5, 5.0)
 		correct_streak = 0
-		rating_update.emit(rating)
+		rating_changed.emit(rating)
 
 func _order_wrong() -> void:
 	wrong_streak += 1
@@ -98,4 +98,4 @@ func _order_wrong() -> void:
 	if wrong_streak >= 2:
 		rating = max(rating - 0.5, 0.0)
 		wrong_streak = 0
-		rating_update.emit(rating)
+		rating_changed.emit(rating)

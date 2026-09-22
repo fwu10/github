@@ -6,8 +6,111 @@
 [ext_resource type="Script" uid="uid://bskh1ii6sxpl1" path="res://bench_switch.gd" id="4_lquwl"]
 [ext_resource type="PackedScene" uid="uid://c436a50v0p8rt" path="res://character.tscn" id="5_7mycd"]
 [ext_resource type="PackedScene" uid="uid://0x7suocpugy5" path="res://order_generation.tscn" id="5_272bh"]
+[ext_resource type="Texture2D" uid="uid://pw8e44c3mm3h" path="res://Textures/serve.png" id="6_cegan"]
+[ext_resource type="Texture2D" uid="uid://cmeaxdqu8on4e" path="res://Textures/server_hovered.png" id="7_82xsv"]
 [ext_resource type="PackedScene" uid="uid://bnmugagej37me" path="res://Menu.tscn" id="7_272bh"]
-[ext_resource type="Texture2D" uid="uid://cpj0pwtei01h1" path="res://Textures/play.png" id="8_5vw27"]
+[ext_resource type="Texture2D" uid="uid://hb3ns2iu0c8c" path="res://Textures/0stars.png" id="8_82xsv"]
+[ext_resource type="Texture2D" uid="uid://c6lil4pg56i2i" path="res://Textures/0.5star.png" id="9_074og"]
+[ext_resource type="Texture2D" uid="uid://neu8fg84n71" path="res://Textures/1star.png" id="10_cegan"]
+[ext_resource type="Texture2D" uid="uid://c8a8yrgxvrnfv" path="res://Textures/1.5stars.png" id="11_82xsv"]
+[ext_resource type="Texture2D" uid="uid://dalmilv12bsn4" path="res://Textures/2stars.png" id="12_getpj"]
+[ext_resource type="Texture2D" uid="uid://bbvjhx4p7rlmo" path="res://Textures/2.5stars.png" id="13_ryguw"]
+[ext_resource type="Texture2D" uid="uid://dyxpofgc03iha" path="res://Textures/3stars.png" id="14_d13ii"]
+[ext_resource type="Texture2D" uid="uid://dwek4m5y5l874" path="res://Textures/3.5stars.png" id="15_1u8w0"]
+[ext_resource type="Texture2D" uid="uid://by5ws5wswfgcy" path="res://Textures/4stars.png" id="16_0odxb"]
+[ext_resource type="Texture2D" uid="uid://dwap6osp4l5xx" path="res://Textures/4.5stars.png" id="17_lswn8"]
+[ext_resource type="Texture2D" uid="uid://bku0vbpptq23o" path="res://Textures/5stars.png" id="18_a6jrf"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_xuqvo"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("8_82xsv")
+}],
+"loop": true,
+"name": &"0.0",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("9_074og")
+}],
+"loop": true,
+"name": &"0.5",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("10_cegan")
+}],
+"loop": true,
+"name": &"1.0",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("11_82xsv")
+}],
+"loop": true,
+"name": &"1.5",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("12_getpj")
+}],
+"loop": true,
+"name": &"2.0",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("13_ryguw")
+}],
+"loop": true,
+"name": &"2.5",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("14_d13ii")
+}],
+"loop": true,
+"name": &"3.0",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("15_1u8w0")
+}],
+"loop": true,
+"name": &"3.5",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("16_0odxb")
+}],
+"loop": true,
+"name": &"4.0",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("17_lswn8")
+}],
+"loop": true,
+"name": &"4.5",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("18_a6jrf")
+}],
+"loop": true,
+"name": &"5.0",
+"speed": 5.0
+}]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_1bvp3"]
 
@@ -17,102 +120,127 @@ script = ExtResource("1_1bvp3")
 [node name="Bench1" type="Node2D" parent="." unique_id=1483968556]
 
 [node name="sandwich" parent="Bench1" unique_id=1215365694 instance=ExtResource("2_0xm2m")]
-position = Vector2(527, 384)
+position = Vector2(526, 263)
 
 [node name="Character" parent="Bench1" unique_id=1096973992 instance=ExtResource("5_7mycd")]
 position = Vector2(632, 157)
 
 [node name="Order_Generation" parent="Bench1" unique_id=1560452680 instance=ExtResource("5_272bh")]
+offset_top = 2.0
+offset_bottom = 2.0
 
 [node name="Node2D" type="Node2D" parent="Bench1" unique_id=759345909]
 
 [node name="Veggies" type="Sprite2D" parent="Bench1/Node2D" unique_id=45062008]
 
 [node name="capcicum" parent="Bench1/Node2D" unique_id=668002391 instance=ExtResource("1_ig7tw")]
-position = Vector2(389, 475)
+position = Vector2(303, 321)
 ingredient_type = "Capcicum"
 
 [node name="olives" parent="Bench1/Node2D" unique_id=921865410 instance=ExtResource("1_ig7tw")]
-position = Vector2(337, 475)
+position = Vector2(311, 258)
 ingredient_type = "Olives"
 
 [node name="jalapenos" parent="Bench1/Node2D" unique_id=1748117359 instance=ExtResource("1_ig7tw")]
-position = Vector2(282, 475)
+position = Vector2(241, 281)
 ingredient_type = "Jalapeno"
 
 [node name="onions" parent="Bench1/Node2D" unique_id=2131316429 instance=ExtResource("1_ig7tw")]
-position = Vector2(336, 550)
+position = Vector2(310, 263)
 ingredient_type = "Onions"
 
 [node name="pickles" parent="Bench1/Node2D" unique_id=1965745833 instance=ExtResource("1_ig7tw")]
-position = Vector2(607, 475)
+position = Vector2(338, 265)
 ingredient_type = "Pickles"
 
 [node name="tomato" parent="Bench1/Node2D" unique_id=461560794 instance=ExtResource("1_ig7tw")]
-position = Vector2(386, 550)
+position = Vector2(329, 325)
 ingredient_type = "Tomato"
 
 [node name="lettuce" parent="Bench1/Node2D" unique_id=1064231243 instance=ExtResource("1_ig7tw")]
-position = Vector2(657, 475)
+position = Vector2(326, 287)
 ingredient_type = "Lettuce"
 
-[node name="Protien" type="Sprite2D" parent="Bench1" unique_id=1505519947]
+[node name="Protein" type="Sprite2D" parent="Bench1" unique_id=1505519947]
 
-[node name="meatballs" parent="Bench1/Protien" unique_id=1633979613 instance=ExtResource("1_ig7tw")]
-position = Vector2(711, 475)
+[node name="meatballs" parent="Bench1/Protein" unique_id=1633979613 instance=ExtResource("1_ig7tw")]
+position = Vector2(843, 274)
 ingredient_type = "Meatballs"
 
-[node name="tuna" parent="Bench1/Protien" unique_id=1299016641 instance=ExtResource("1_ig7tw")]
-position = Vector2(763, 475)
+[node name="tuna" parent="Bench1/Protein" unique_id=1299016641 instance=ExtResource("1_ig7tw")]
+position = Vector2(901, 265)
 ingredient_type = "Tuna"
 
-[node name="chicken" parent="Bench1/Protien" unique_id=861367503 instance=ExtResource("1_ig7tw")]
-position = Vector2(442, 475)
+[node name="chicken" parent="Bench1/Protein" unique_id=861367503 instance=ExtResource("1_ig7tw")]
+position = Vector2(858, 229)
 ingredient_type = "Chicken"
 
-[node name="steak" parent="Bench1/Protien" unique_id=1079962756 instance=ExtResource("1_ig7tw")]
-position = Vector2(722, 550)
+[node name="steak" parent="Bench1/Protein" unique_id=1079962756 instance=ExtResource("1_ig7tw")]
+position = Vector2(884, 296)
 ingredient_type = "Steak"
 
 [node name="Cheese" type="Sprite2D" parent="Bench1" unique_id=184315029]
 
 [node name="edam" parent="Bench1/Cheese" unique_id=1639008825 instance=ExtResource("1_ig7tw")]
-position = Vector2(440, 550)
+position = Vector2(683, 328)
 ingredient_type = "Edam"
 
 [node name="american" parent="Bench1/Cheese" unique_id=663178595 instance=ExtResource("1_ig7tw")]
-position = Vector2(672, 550)
+position = Vector2(723, 316)
 ingredient_type = "American"
 
 [node name="cheddar" parent="Bench1/Cheese" unique_id=1222944189 instance=ExtResource("1_ig7tw")]
-position = Vector2(552, 475)
+position = Vector2(693, 311)
 ingredient_type = "Cheddar"
 
 [node name="Sauce" type="Sprite2D" parent="Bench1" unique_id=1420764637]
 
 [node name="mustard" parent="Bench1/Sauce" unique_id=723822450 instance=ExtResource("1_ig7tw")]
-position = Vector2(774, 550)
+position = Vector2(517, 367)
 ingredient_type = "Mustard"
 
 [node name="relish" parent="Bench1/Sauce" unique_id=1784230018 instance=ExtResource("1_ig7tw")]
-position = Vector2(495, 475)
+position = Vector2(340, 310)
 ingredient_type = "Relish"
 
 [node name="hot_sauce" parent="Bench1/Sauce" unique_id=1529647703 instance=ExtResource("1_ig7tw")]
-position = Vector2(280, 550)
+position = Vector2(513, 349)
 ingredient_type = "Hot_Sauce"
 
 [node name="aioli" parent="Bench1/Sauce" unique_id=229283149 instance=ExtResource("1_ig7tw")]
-position = Vector2(552, 550)
+position = Vector2(509, 350)
 ingredient_type = "Aioli"
 
 [node name="mayo" parent="Bench1/Sauce" unique_id=1499343112 instance=ExtResource("1_ig7tw")]
-position = Vector2(496, 550)
+position = Vector2(517, 361)
 ingredient_type = "Mayo"
 
 [node name="ketchup" parent="Bench1/Sauce" unique_id=669465183 instance=ExtResource("1_ig7tw")]
-position = Vector2(609, 550)
+position = Vector2(291, 318)
 ingredient_type = "Ketchup"
+
+[node name="Rating" type="AnimatedSprite2D" parent="Bench1" unique_id=2118978488]
+position = Vector2(1014, 25)
+scale = Vector2(0.38888887, 0.3888889)
+sprite_frames = SubResource("SpriteFrames_xuqvo")
+animation = &"0.5"
+
+[node name="CanvasLayer" type="CanvasLayer" parent="Bench1" unique_id=1589628055]
+scale = Vector2(0.5, 0.5)
+transform = Transform2D(0.5, 0, 0, 0.5, 0, 0)
+
+[node name="TextureButton" type="TextureButton" parent="Bench1/CanvasLayer" unique_id=1547014558]
+anchors_preset = -1
+anchor_left = 0.669
+anchor_top = 0.497
+anchor_right = 1.054
+anchor_bottom = 0.698
+offset_left = 1035.312
+offset_top = 723.944
+offset_right = 1011.792
+offset_bottom = 683.696
+texture_normal = ExtResource("6_cegan")
+texture_hover = ExtResource("7_82xsv")
 
 [node name="Area2D" type="Area2D" parent="." unique_id=276369202]
 script = ExtResource("4_lquwl")
@@ -126,12 +254,5 @@ shape = SubResource("RectangleShape2D_1bvp3")
 [node name="Menu" parent="." unique_id=1325391505 instance=ExtResource("7_272bh")]
 visible = false
 
-[node name="TextureButton" type="TextureButton" parent="." unique_id=1547014558]
-offset_left = 880.0
-offset_top = 498.0
-offset_right = 1300.0
-offset_bottom = 588.0
-texture_normal = ExtResource("8_5vw27")
-
+[connection signal="pressed" from="Bench1/CanvasLayer/TextureButton" to="." method="_on_texture_button_pressed"]
 [connection signal="input_event" from="Area2D" to="Area2D" method="_on_input_event"]
-[connection signal="pressed" from="TextureButton" to="." method="_on_texture_button_pressed"]

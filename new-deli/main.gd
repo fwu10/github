@@ -2,13 +2,16 @@ extends Node2D
 signal done_pressed
 var sandwich_ingredients = []
 @onready var rating_update = get_tree().get_first_node_in_group("order_board")
+@onready var animated_sprite: AnimatedSprite2D = $Bench1/Rating
 
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
 	rating_update.rating_changed.connect(_on_rating_changed)
+	animated_sprite.play(str(2.5))
 
 func _on_rating_changed(new_rating) -> void:
 	print(new_rating)
+	animated_sprite.play(str(new_rating))
 	
 
 func show_bench(bench_index: int) -> void:

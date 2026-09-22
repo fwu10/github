@@ -6,12 +6,11 @@ var on_sandwich := false
 signal clear_sandwich
 @export var ingredient_type: String
 @onready var animated_sprite: AnimatedSprite2D = $AnimatedSprite2D
+@onready var board = get_tree().get_first_node_in_group("order_board")
 
 func _ready() -> void:
 	animated_sprite.play(ingredient_type)
-	var board = get_tree().get_first_node_in_group("order_board")
-	if board:
-		board.clear_sandwich.connect(_clear_sandwich)
+	board.clear_sandwich.connect(_clear_sandwich)
 func _clear_sandwich() -> void:
 	queue_free()
 	
@@ -56,7 +55,5 @@ func _on_area_2d_area_exited(area: Area2D) -> void:
 	if area.is_in_group("sandwich"):
 		on_sandwich = false
 		remove_from_group("on_sandwich")
-		var board = get_tree().get_first_node_in_group("order_board")
-		if board:
-			board.mark_unplaced(ingredient_type)
+		board.mark_unplaced(ingredient_type)
 		
