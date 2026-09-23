@@ -1,5 +1,6 @@
 extends Control
 @onready var button
+signal done_button
 
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
@@ -13,7 +14,7 @@ func _process(delta: float) -> void:
 
 func _on_texture_button_pressed() -> void:
 	hide()
-
-
+	done_button.emit()
+	
 func _on_texture_button_2_pressed() -> void:
 	get_tree().quit()

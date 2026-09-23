@@ -16,15 +16,16 @@ shape = SubResource("RectangleShape2D_0xm2m")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=896240070]
 position = Vector2(-0.4999988, 0.49999952)
-scale = Vector2(0.06646059, 0.10359409)
+scale = Vector2(0.75, 0.75)
 sprite_frames = ExtResource("2_h3hq5")
-animation = &"lettuce"
+animation = &"Aioli"
 
 [node name="Label" type="Label" parent="." unique_id=1052968618]
 offset_left = -167.0
 offset_top = 25.0
 offset_right = 169.0
 offset_bottom = 48.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
 horizontal_alignment = 1
 
 [connection signal="input_event" from="Area2D" to="." method="_on_area_2d_input_event"]
