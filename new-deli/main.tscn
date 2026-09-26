@@ -133,31 +133,31 @@ offset_bottom = 2.0
 [node name="Veggies" type="Sprite2D" parent="Bench1/Node2D" unique_id=45062008]
 
 [node name="capcicum" parent="Bench1/Node2D" unique_id=668002391 instance=ExtResource("1_ig7tw")]
-position = Vector2(558, 548)
+position = Vector2(557, 578)
 ingredient_type = "Capcicum"
 
 [node name="olives" parent="Bench1/Node2D" unique_id=921865410 instance=ExtResource("1_ig7tw")]
-position = Vector2(523, 604)
+position = Vector2(485, 577)
 ingredient_type = "Olives"
 
 [node name="jalapenos" parent="Bench1/Node2D" unique_id=1748117359 instance=ExtResource("1_ig7tw")]
-position = Vector2(388, 552)
+position = Vector2(372, 514)
 ingredient_type = "Jalapeno"
 
 [node name="onions" parent="Bench1/Node2D" unique_id=2131316429 instance=ExtResource("1_ig7tw")]
-position = Vector2(429, 605)
+position = Vector2(406, 577)
 ingredient_type = "Onions"
 
 [node name="pickles" parent="Bench1/Node2D" unique_id=1965745833 instance=ExtResource("1_ig7tw")]
-position = Vector2(559, 492)
+position = Vector2(584, 507)
 ingredient_type = "Pickles"
 
 [node name="tomato" parent="Bench1/Node2D" unique_id=461560794 instance=ExtResource("1_ig7tw")]
-position = Vector2(476, 553)
+position = Vector2(519, 510)
 ingredient_type = "Tomato"
 
 [node name="lettuce" parent="Bench1/Node2D" unique_id=1064231243 instance=ExtResource("1_ig7tw")]
-position = Vector2(478, 493)
+position = Vector2(451, 513)
 ingredient_type = "Lettuce"
 
 [node name="Protein" type="Sprite2D" parent="Bench1" unique_id=1505519947]
@@ -207,15 +207,15 @@ position = Vector2(1094, 517)
 ingredient_type = "Hot_Sauce"
 
 [node name="aioli" parent="Bench1/Sauce" unique_id=229283149 instance=ExtResource("1_ig7tw")]
-position = Vector2(1062, 596)
+position = Vector2(1026, 587)
 ingredient_type = "Aioli"
 
 [node name="mayo" parent="Bench1/Sauce" unique_id=1499343112 instance=ExtResource("1_ig7tw")]
-position = Vector2(993, 597)
+position = Vector2(953, 590)
 ingredient_type = "Mayo"
 
 [node name="ketchup" parent="Bench1/Sauce" unique_id=669465183 instance=ExtResource("1_ig7tw")]
-position = Vector2(385, 495)
+position = Vector2(1099, 589)
 ingredient_type = "Ketchup"
 
 [node name="Rating" type="AnimatedSprite2D" parent="Bench1" unique_id=2118978488]
